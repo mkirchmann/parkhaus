@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.neuenberger.de/parkhaus/data/" targetNamespace="http://www.neuenberger.de/parkhaus/data/">
+    <element name="Root" type="string"></element>
+
+    <complexType name="CplxParkhausData">
+    	<attribute name="parking_facility_reference" type="string"></attribute>
+    	<attribute name="originalname" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="free" type="boolean"></attribute>
+    	<attribute name="open" type="boolean"></attribute>
+    	<attribute name="parking_facility_status_time"
+    		type="dateTime">
+    	</attribute>
+
+    	<attribute name="parking_facility_occupancy" type="double"></attribute>
+    	<attribute name="totalNumberOfVacantParkingSpaces" type="int"></attribute>
+    	<attribute name="freespaces" type="int"></attribute>
+    	<attribute name="total_number_of_occupied_parking_spaces"
+    		type="int">
+    	</attribute>
+    	<attribute name="occupiedspaces" type="int"></attribute>
+    	<attribute name="allspaces" type="int"></attribute>
+    	<attribute name="shortcode" type="string"></attribute>
+    </complexType>
+</schema>
