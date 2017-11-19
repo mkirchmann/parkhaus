@@ -93,6 +93,7 @@ public class ParkhausDataCollector {
 		StringBuilder builder = new StringBuilder();
 		builder.append("\n");
 		builder.append(unmarshal.getName()).append("\t");
+		builder.append(unmarshal.isOpen()).append("\t");
 		builder.append(unmarshal.getParkingFacilityStatusTime().toGregorianCalendar().getTime()).append("\t");
 		builder.append(unmarshal.getFreespaces()).append("\t");
 		builder.append(unmarshal.getOccupiedspaces()).append("\t");
