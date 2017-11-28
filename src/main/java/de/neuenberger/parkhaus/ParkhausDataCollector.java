@@ -6,6 +6,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -94,7 +97,11 @@ public class ParkhausDataCollector {
 		builder.append("\n");
 		builder.append(unmarshal.getName()).append("\t");
 		builder.append(unmarshal.isOpen()).append("\t");
-		builder.append(unmarshal.getParkingFacilityStatusTime().toGregorianCalendar().getTime()).append("\t");
+		Date time = unmarshal.getParkingFacilityStatusTime().toGregorianCalendar().getTime();
+		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+		DateFormat timeFormat = new SimpleDateFormat("HH:mm");
+		builder.append(dateFormat.format(time)).append("\t");
+		builder.append(timeFormat.format(time)).append("\t");
 		builder.append(unmarshal.getFreespaces()).append("\t");
 		builder.append(unmarshal.getOccupiedspaces()).append("\t");
 		builder.append(unmarshal.getAllspaces()).append("\t");
